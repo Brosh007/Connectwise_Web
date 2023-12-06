@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ConnectWise Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark background color for the body */
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; margin:0; padding: 0;margin-bottom:50px;margin-top:-10px">
+
+    <div style="background-image: url('/images/gian-cescon-N0g-deioHo4-unsplash.jpg'); background-size: cover; background-position: center; height: 100vh; position:sticky;">
+        <div style="background-color: rgba(0, 0, 0, 0.5); height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+
+            <div style="text-align: center; padding: 100px; color: #fff;">
+                <img src="~/images/smallxlogo.png" alt="ConnectWise Logo" style="width: 150px; height: auto; margin-bottom: 20px;">
+                <h1 style="font-size: 36px; margin-bottom: 20px;">Welcome to ConnectWise</h1>
+                <p style="font-size: 18px; margin-bottom: 30px;">Your platform for connecting business owners and interns.</p>
+                <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+                    <a href="@Url.Action("BusinessOwner", "Register")" style="display: inline-block; width: 280px; padding: 10px 20px; background-color: #3CBCBC; color: #fff; text-decoration: none; border-radius: 4px; cursor: pointer; margin-right: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Register as Business Owner</a>
+                    <a href="@Url.Action("Intern", "Register")" style="display: inline-block; width: 280px; padding: 10px 20px; background-color: #3CBCBC; color: #fff; text-decoration: none; border-radius: 4px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Register as Intern</a>
+                </div>
+                <a class="btn btn-primary" asp-area="" asp-controller="Login" asp-action="Login" style="padding: 12px 30px; font-size: 16px; background-color: #3C1478;">Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

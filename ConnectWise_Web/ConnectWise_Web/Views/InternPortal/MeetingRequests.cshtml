@@ -1,0 +1,139 @@
+﻿@model List<MeetingRequest>
+
+@{
+    Layout = "~/Views/Shared/_LayoutIN.cshtml";
+    ViewData["Title"] = "Meeting Requests";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222; /* Darker background color for the body */
+        color: white;
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    h2 {
+        color: mediumpurple; /* Purple color for headings */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .table.table-bordered {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff; /* White background for the table */
+        border: 2px solid #3CBCBC; /* Teal border for the table */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #3CBCBC; /* Teal background for table headers */
+        color: white; /* White text color for table headers */
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 2px solid #3CBCBC; /* Teal border for table headers */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray background for even rows */
+    }
+
+    tr:hover {
+        background-color: #e0e0e0; /* Lighter gray background on hover */
+    }
+
+    .btn {
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn-success {
+        background-color: #3CBCBC; /* Teal button color for "Accept" */
+        border: none;
+        color: white;
+    }
+
+        .btn-success:hover {
+            background-color: #36a6a6; /* Darker teal on hover */
+        }
+
+    .btn-danger {
+        background-color: #ff4d4d; /* Red button color for "Decline" */
+        border: none;
+        color: white;
+    }
+
+        .btn-danger:hover {
+            background-color: #ff3333; /* Darker red on hover */
+        }
+
+    .status {
+        font-weight: bold;
+    }
+</style>
+
+<div class="container">
+    <h2>Meeting Requests</h2>
+
+    @if (Model.Count == 0)
+    {
+        <p>No meeting requests found.</p>
+    }
+    else
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Business Owner</th>
+                    <th>Meeting Date and Time</th>
+                    <th>Meeting Purpose</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var request in Model)
+                {
+                    <tr>
+                        <td>@request.BusinessOwnerCompanyName</td> <!-- Display the Business Owner's Company Name -->
+                        <td>@request.MeetingDateTime.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@request.MeetingPurpose</td>
+                        <td>
+                            @if (request.Status == "Pending")
+                            {
+                                <span class="status">Pending</span>
+                            }
+                            else
+                            {
+                                <span class="status">@request.Status</span>
+                            }
+                        </td>
+                        <td>
+                            @if (request.Status == "Pending")
+                            {
+                                <a href="@Url.Action("AcceptMeeting", "InternPortal", new { meetingRequestId = request.MeetingRequestID })" class="btn btn-success">Accept</a>
+                                <a href="@Url.Action("DeclineMeeting", "InternPortal", new { meetingRequestId = request.MeetingRequestID })" class="btn btn-danger">Decline</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ConnectWise_Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ConnectWise_Web.styles.css" asp-append-version="true" />
+    <style>
+        /* Custom styles for the logo and navbar */
+        .navbar {
+            background-color: #333; /* Dark background color for the navbar */
+        }
+
+        .navbar-brand {
+            margin: auto; /* Center the logo horizontally */
+        }
+
+            .navbar-brand .logo-image {
+                width: 100px; /* Adjust the width as needed */
+                height: auto; /* Automatically adjust height */
+                display: block; /* Ensure the image is centered and occupies its own space */
+            }
+
+        .navbar-nav .nav-link {
+            color: white !important; /* White color for menu links */
+            
+        }
+        
+        .navbar-nav {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            margin-right:100px;
+
+        }
+
+            .navbar-nav .nav-item {
+                margin: 0 10px; /* Adjust the margin as needed */
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/connectwise_logo.png" alt="ConnectWise_Web Logo" class="logo-image">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+        
+    </div>
+
+    <footer class="border-top footer text-light" style="background-color: #333;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>&copy; 2023 - ConnectWise_Web</p>
+                    <p>Your platform for connecting business owners and interns.</p>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-unstyled float-end">
+                        <li class="mb-2"><strong>Contact:</strong> info@connectwise.com</li>
+                        <li class="mb-2"><strong>Address:</strong> 123 ConnectWay, City, Country</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿@model List<Webinar>
+@{
+    Layout = "~/Views/Shared/_LayoutIN.cshtml";
+    ViewData["Title"] = "Intern Home";
+}
+
+<style>
+    /* Additional CSS for the intern webinar list view */
+    .webinar-container {
+        margin-top: 20px;
+    }
+
+    .webinar-table {
+        width: 100%;
+        border-collapse: collapse;
+        color: white; /* Set text color to white */
+    }
+
+        .webinar-table th,
+        .webinar-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .webinar-table th {
+            background-color: #3CBCBC;
+            color: white; /* Set text color to white */
+        }
+
+        .webinar-table a.btn {
+            padding: 8px 15px;
+            background-color: #3CBCBC;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+    /* Styling for the success message */
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+    }
+
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        text-align:center
+        
+    }
+
+    /* Styling for the title */
+    h4 {
+        text-align: center;
+        color: mediumpurple;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <!-- Display the success message if it exists in TempData -->
+        @if (!string.IsNullOrEmpty(TempData["Message"] as string))
+        {
+            <div class="alert alert-success">@TempData["Message"]</div>
+        }
+
+        <h4>Upcoming Webinars</h4>
+        <table class="webinar-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date and Time</th>
+                    <th>Location</th>
+                    <th>Speaker</th>
+                    <th></th> <!-- Empty header for the sign-up button column -->
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var webinar in Model)
+                {
+                    <tr>
+                        <td>@webinar.Title</td>
+                        <td>@webinar.DateAndTime.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@webinar.Location</td>
+                        <td>@webinar.SpeakerName</td>
+                        <td><a href="@Url.Action("SignUpForWebinar", new { webinarId = webinar.WebinarID })" class="btn btn-primary">Sign Up</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

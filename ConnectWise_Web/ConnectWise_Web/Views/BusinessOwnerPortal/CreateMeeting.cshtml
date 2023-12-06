@@ -1,0 +1,62 @@
+﻿@model MeetingRequest
+
+@{
+    ViewData["Title"] = "Schedule Meeting";
+}
+
+<h2>Schedule Meeting</h2>
+
+@using (Html.BeginForm("CreateMeeting", "BusinessOwnerPortal", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.BusinessOwnerID)
+    @Html.HiddenFor(model => model.InternID)
+    @Html.HiddenFor(model => model.InternFirstName)
+    @Html.HiddenFor(model => model.Status)
+    @Html.HiddenFor(model => model.InternLastName)
+    @Html.HiddenFor(model => model.BusinessOwnerCompanyName)
+    
+   
+
+    <!-- Display intern and business owner details -->
+    <div>
+        <label>BusinessId:</label>
+        <p>@Model.BusinessOwnerID</p>
+    </div>
+    <div>
+        <label>InternId:</label>
+        <p>@Model.InternID </p>
+    </div>
+
+    
+    <div>
+        <label>Intern:</label>
+        <p>@Model.InternFirstName @Model.InternLastName</p>
+    </div>
+
+    <div>
+        <label>Business Owner's Company:</label>
+        <p>@Model.BusinessOwnerCompanyName</p>
+    </div>
+    <div>
+        <label>Status :</label>
+        <p>@Model.Status</p>
+    </div>
+
+    <!-- Meeting Date and Time -->
+    <div>
+        @Html.LabelFor(model => model.MeetingDateTime)
+        @Html.EditorFor(model => model.MeetingDateTime, new { htmlAttributes = new { @class = "form-control", @type = "datetime-local" } })
+    </div>
+
+    <!-- Meeting Purpose -->
+    <div>
+        @Html.LabelFor(model => model.MeetingPurpose)
+        @Html.EditorFor(model => model.MeetingPurpose, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+
+    <!-- Submit Button -->
+    <input type="submit" value="Schedule Meeting" class="btn btn-primary" />
+}

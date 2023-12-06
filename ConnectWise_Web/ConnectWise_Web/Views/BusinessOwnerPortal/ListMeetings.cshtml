@@ -1,0 +1,104 @@
+﻿@model List<MeetingRequest>
+@{
+    Layout = "~/Views/Shared/_LayoutBO.cshtml";
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222; /* Darker background color for the body */
+        color: white;
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    h2 {
+        color: mediumpurple; /* Purple color for headings */
+        text-align: center;
+        padding: 10px;
+    }
+
+    a.link {
+        color: #3CBCBC;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    table.table {
+        width: 70%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff; /* White background for the table */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #3CBCBC; /* Teal background for all table headers */
+        color: white; /* White text color for table headers */
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+        th:first-child {
+            background-color: #3CBCBC; /* Teal background for the first column header */
+        }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray background for even rows */
+    }
+
+    tr:hover {
+        background-color: #e0e0e0; /* Lighter gray background on hover */
+    }
+
+    .btn {
+        background-color: #3CBCBC;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .btn:hover {
+            background-color: mediumpurple;
+        }
+</style>
+
+<h2>List of Meetings</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="background-color: #3CBCBC;">Intern Name</th> <!-- Add this column -->
+            <th style="background-color: #3CBCBC;">Meeting Date and Time</th>
+            <th style="background-color: #3CBCBC;">Meeting Purpose</th>
+            <th style="background-color: #3CBCBC;">Status</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var meetingRequest in Model)
+        {
+            <tr>
+                <td>@meetingRequest.InternFirstName @meetingRequest.InternLastName</td> <!-- Display intern's name -->
+                <td>@meetingRequest.MeetingDateTime.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@meetingRequest.MeetingPurpose</td>
+                <td>@meetingRequest.Status</td>                
+            </tr>
+        }
+    </tbody>
+</table>

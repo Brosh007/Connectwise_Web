@@ -1,0 +1,104 @@
+﻿@model ConnectWise_Web.Models.MeetingRequest
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222; /* Light gray background color */
+        color: white;
+    }
+
+    h2 {
+        color: mediumpurple; /*  color for headings */
+        text-align: center;
+    }
+
+    hr {
+        border-top: 2px solid #3CBCBC;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #333;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group label {
+        color: #3CBCBC;
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #444; /* Slightly lighter border color */
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #444;
+        color: white; /* Text color for form controls */
+    }
+
+    .btn-primary {
+        background-color: #3CBCBC; /* Teal button color */
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .btn-primary:hover {
+        background-color: #36a6a6; /* Darker teal on hover */
+    }
+
+    .back-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .back-link a {
+        color: #3CBCBC;
+    }
+</style>
+
+<h2>Request Meeting with Intern</h2>
+
+@using (Html.BeginForm("RequestMeeting", "BusinessOwnerPortal", FormMethod.Post))
+{
+    @Html.AntiForgeryToken() <!-- Include anti-forgery token for security -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.HiddenFor(model => model.InternID)
+                <label for="MeetingDateTime">Meeting Date and Time</label>
+                @Html.TextBoxFor(model => model.MeetingDateTime, new { @class = "form-control", id = "MeetingDateTime", type = "datetime-local" })
+            </div>
+            <div class="form-group">
+                <label for="MeetingPurpose">Meeting Purpose</label>
+                @Html.TextAreaFor(model => model.MeetingPurpose, new { @class = "form-control", id = "MeetingPurpose" })
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+}
+
+<div class="back-link">
+    <a href="@Url.Action("ListInterns", "BusinessOwnerPortal")">Back to Dashboard</a>
+</div>

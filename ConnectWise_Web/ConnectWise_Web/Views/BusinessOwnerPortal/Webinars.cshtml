@@ -1,0 +1,97 @@
+﻿@model List<Webinar>
+@{
+    Layout = "~/Views/Shared/_LayoutBO.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Webinars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222; /* Darker background color for the body */
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: mediumpurple; /* purple color for headings */
+        }
+
+        a.link {
+            color: #3CBCBC;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        table.table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff; /* White background for the table */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3CBCBC; /* Teal background for table headers */
+            color: #fff; /* White text color for table headers */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light gray background for even rows */
+        }
+
+        tr:hover {
+            background-color: #e0e0e0; /* Lighter gray background on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Webinars</h2>
+        <a asp-action="CreateWebinars" class="link">Add New Webinar</a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date and Time</th>
+                <th>Location</th>
+                <th>Speaker Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var webinar in Model)
+            {
+                <tr>
+                    <td>@webinar.Title</td>
+                    <td>@webinar.Description</td>
+                    <td>@webinar.DateAndTime</td>
+                    <td>@webinar.Location</td>
+                    <td>@webinar.SpeakerName</td>
+                    <td>
+                        <a asp-action="EditWebinars" asp-route-id="@webinar.WebinarID" class="link">Edit</a> 
+                        <a asp-action="Delete" asp-route-id="@webinar.WebinarID" class="link">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutBO.cshtml";
+    ViewData["Title"] = "Business Owner Home";
+}
+
+<style>
+    /* Additional styling for enhanced visual appeal */
+    .feature-box {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .feature-box h4 {
+            color: #3CBCBC;
+        }
+
+        .feature-box p {
+            font-size: 16px;
+            color: #555;
+        }
+
+    .landing-image {
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .section-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .text-teal {
+        color: #3CBCBC;
+    }
+    p {
+    font-size: 18px;
+    line-height: 1.6; /* Adjust line height for better readability */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Use a different font */
+    padding: 10px;
+    color:lightgrey ;
+}
+</style>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Welcome to ConnectWise Business Owner Portal</h2>
+            <p>This portal is designed to help you manage your business and connect with interns. It provides you with various features to streamline your business operations and connect with potential interns for collaboration.</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <h4>Features</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <i class="fas fa-calendar-alt"></i> Manage Webinars
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-search"></i> Search and Connect with Interns
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-comments"></i> Start Conversations with Interns
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-9">
+            <div class="tab-content">
+                <!-- Home Section -->
+                <div class="tab-pane fade show active" id="home" role="tabpanel">
+                    <!-- Content for the Home section -->
+                    <h4 class="text-teal"> ConnectWise Business Owner Portal</h4>
+                    <img src="~/images/flat-lay-business-concept.jpg" alt="Landing Page Image" class="img-fluid landing-image">
+                    <p >This portal is designed to help you manage your business and connect with interns. It provides you with various features to streamline your business operations and connect with potential interns for collaboration.</p>
+
+                    <h4 class="text-teal">Manage Webinars</h4>
+                    <img src="~/images/task_distribution_18.jpg" alt="Webinars Image" class="img-fluid section-image">
+                    <p >In the Manage Webinars section, you can create, edit, and manage webinars to showcase your business expertise and engage with potential interns.</p>
+
+                    <h4 class="text-teal">Search and Connect with Interns</h4>
+                    <img src="~/images/document-marketing-strategy-business-concept.jpg" alt="Interns Image" class="img-fluid section-image">
+                    <p >In the Search and Connect with Interns section, you can search for interns based on their skills and interests. Connect with them to explore collaboration opportunities and projects.</p>
+
+                    <h4 class="text-teal">Messaging</h4>
+                    <img src="~/images/alexander-shatov-pejtzft6c1q-unsplash.jpg" alt="Messaging Image" class="img-fluid section-image">
+                    <p >In the Messaging section, you can start meaningful conversations with interns. Discuss project details, opportunities, and more.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
