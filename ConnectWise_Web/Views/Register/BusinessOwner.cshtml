@@ -1,0 +1,93 @@
+﻿@model ConnectWise_Web.Models.BusinessOwner
+
+@{
+    ViewData["Title"] = "Business Owner Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222; /* Darker background color for the body */
+        }
+
+        .form-container {
+            background-image: url('/images/tofan-teodor-rkz3-kurwmu-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 1000px;
+            width: 100%;
+            color: #fff;
+            margin-top: -150px;
+        }
+
+        .form-control {
+            background-color: #333; /* Darker background color for textboxes */
+            color: #fff;
+            border: 1px solid #444;
+        }
+
+        .form-group {
+            margin-bottom: 15px; /* Add spacing between each form group */
+        }
+
+    </style>
+
+    <div style="background-color: #333; height: 100vh; display: flex; align-items: center; justify-content: center;">
+        <div class="form-container">
+
+            <h1 style="font-size: 28px; margin-bottom: 20px;">Business Owner Registration</h1>
+            <p style="font-size: 16px; margin-bottom: 20px;">Register as a business owner to connect with interns.</p>
+
+            <form asp-action="BusinessOwner" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="FirstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="LastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" asp-for="Email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" asp-for="Password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" asp-for="PhoneNumber" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="ProfileImage" placeholder="Profile Image URL" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="CompanyName" placeholder="Company Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="Industry" placeholder="Industry" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="Location" placeholder="Location" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" asp-for="Bio" placeholder="Bio" rows="4" required></textarea>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="@Url.Action("Index", "Register")" class="btn btn-secondary">Back</a>
+            </div>
+
+        </div>
+    </div>

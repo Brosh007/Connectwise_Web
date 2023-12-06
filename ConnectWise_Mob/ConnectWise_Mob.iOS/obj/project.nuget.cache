@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "IdfTBU1lz5AIO8yfM0iHk79yL+xy/qbdG/99fnx/fWIdaiIXXybRPn7bUG4BF0v79r5TiiZVEepX/WkFQanAhA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\broshie007\\source\\repos\\ConnectWise_Web\\ConnectWise_Mob\\ConnectWise_Mob.iOS\\ConnectWise_Mob.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\broshie007\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\broshie007\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\broshie007\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

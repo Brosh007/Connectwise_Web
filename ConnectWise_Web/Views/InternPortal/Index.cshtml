@@ -1,0 +1,99 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutIN.cshtml";
+    ViewData["Title"] = "Intern Home";
+}
+
+<style>
+    /* Additional styling for enhanced visual appeal */
+    .feature-box {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-box h4 {
+        color: #3CBCBC;
+    }
+
+    .feature-box p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .landing-image {
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .section-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .text-teal {
+        color: #3CBCBC;
+    }
+    
+    p {
+        font-size: 18px;
+        line-height: 1.6; /* Adjust line height for better readability */
+        margin-bottom: 20px; /* Add spacing between paragraphs */
+        font-family: 'Helvetica Neue', Arial, sans-serif; /* Use a different font */
+        padding: 10px;
+        color: lightgrey;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Welcome to ConnectWise Intern Portal</h2>
+            <p>This portal is designed to help you connect with businesses and explore internship opportunities. It provides you with various features to search for companies, attend webinars, and communicate with business owners.</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <h4>Features</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <i class="fas fa-search"></i> Search Webinars and Sign Up
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-search"></i> Search Companies by Industry and Location
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-comments"></i> Meeting with Business Owners
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-9">
+            <div class="tab-content">
+                <!-- Home Section -->
+                <div class="tab-pane fade show active" id="home" role="tabpanel">
+                    <!-- Content for the Home section -->
+                    <h4 class="text-teal"> ConnectWise Intern Portal</h4>
+                    <img src="~/images/document-marketing-strategy-business-concept.jpg" alt="Landing Page Image" class="img-fluid landing-image">
+                    <p>This portal is designed to help you connect with businesses and explore internship opportunities. It provides you with various features to search for companies, attend webinars, and communicate with business owners.</p>
+
+                    <h4 class="text-teal">Search Webinars and Sign Up</h4>
+                    <img src="~/images/remote-meeting-woman-working-from-home-during-coronavirus-covid-19-quarantine-remote-office-concept.jpg" alt="Webinars Image" class="img-fluid section-image">
+                    <p>In the Search Webinars and Sign Up section, you can explore and sign up for webinars to enhance your skills and knowledge.</p>
+
+                    <h4 class="text-teal">Search Companies by Industry and Location</h4>
+                    <img src="~/images/modern-office-building-low-angle-view-skyscrapers-city-singapore-modern-office-building-low-angle-view-skyscrapers-city-singapore.jpg" alt="Companies Image" class="img-fluid section-image">
+                    <p>In the Search Companies by Industry and Location section, you can discover companies that match your interests and explore internship opportunities.</p>
+
+                    <h4 class="text-teal">Meeting with Business Owners</h4>
+                    <img src="~/images/alexander-shatov-pejtzft6c1q-unsplash.jpg" alt="Messaging Image" class="img-fluid section-image">
+                    <p>In the Meeting section , view requested meetings that were made by business owners and accept or decline the meetings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

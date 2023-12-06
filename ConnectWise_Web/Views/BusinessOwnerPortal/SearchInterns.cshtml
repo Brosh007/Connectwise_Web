@@ -1,0 +1,101 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutBO.cshtml"; // Specify the path to your _LayoutBO layout
+    ViewData["Title"] = "Search Interns";
+}
+
+<!-- Include the CSS styles -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222; /* Darker background color for the body */
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    h2,h5 ,p{
+        color: mediumpurple; /* purple color for headings */
+        text-align:center;
+    }
+
+    a.link {
+        color: #3CBCBC;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    table.table {
+        width: 70%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff; /* White background for the table */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #3CBCBC; /* Teal background for table headers */
+        color: #fff; /* White text color for table headers */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray background for even rows */
+    }
+
+    tr:hover {
+        background-color: #e0e0e0; /* Lighter gray background on hover */
+    }
+</style>
+
+<h5>Search Interns</h5>
+
+<form asp-action="SearchInterns" method="get" class="container">
+    <div class="form-group">
+        <label for="searchTerm" class="h2">Search by Skills or Interests:</label>
+        <input type="text" id="searchTerm" name="searchTerm" class="form-control" value="@ViewBag.SearchTerm" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+
+<h5>Search Results</h5>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Intern ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var intern in Model)
+            {
+                <tr>
+                    <td>@intern.InternID</td>
+                    <td>@intern.FirstName</td>
+                    <td>@intern.LastName</td>
+                    <td>@intern.Email</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No interns found.</p>
+}

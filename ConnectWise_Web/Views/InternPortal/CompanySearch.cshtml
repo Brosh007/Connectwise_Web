@@ -1,0 +1,88 @@
+﻿@model List<BusinessOwner>
+@{
+    Layout = "~/Views/Shared/_LayoutIN.cshtml";
+    ViewData["Title"] = "Company Search";
+}
+
+<style>
+    /* Additional CSS for the company search view */
+    .company-search-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .company-search-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .company-search-table th,
+        .company-search-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+            color: white; /* Set text color to white */
+        }
+
+        .company-search-table th {
+            background-color: #3CBCBC;
+        }
+
+        .company-search-table a.btn {
+            padding: 8px 15px;
+            background-color: #3CBCBC;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+    /* Center the search input */
+    .search-input-container {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="company-search-container">
+            <h4>Company Search</h4>
+            <form method="get" action="@Url.Action("CompanySearch", "InternPortal")">
+                <div class="form-group search-input-container">
+                    <input type="text" name="searchTerm" id="searchTerm" class="form-control" style="width: 360px;" placeholder="Search for companies by location or industry" />
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+
+            @if (Model.Count > 0)
+            {
+                <h4 class="mt-4">Search Results</h4>
+                <table class="company-search-table">
+                    <thead>
+                        <tr>
+                            <th>Company Name</th>
+                            <th>Location</th>
+                            <th>Industry</th>
+                            <th>Bio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var company in Model)
+                        {
+                            <tr>
+                                <td>@company.CompanyName</td>
+                                <td>@company.Location</td>
+                                <td>@company.Industry</td>
+                                <td>@company.Bio</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No results found.</p>
+            }
+        </div>
+    </div>
+</div>

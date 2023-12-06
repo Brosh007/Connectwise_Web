@@ -1,0 +1,132 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ConnectWise_Web
+build_property.RootNamespace = ConnectWise_Web
+build_property.ProjectDir = C:\Users\broshie007\Desktop\ConnectWise_Web\ConnectWise_Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\broshie007\Desktop\ConnectWise_Web\ConnectWise_Web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/CreateMeeting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxDcmVhdGVNZWV0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/CreateWebinars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxDcmVhdGVXZWJpbmFycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/EditWebinars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxFZGl0V2ViaW5hcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/ListInterns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxMaXN0SW50ZXJucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/ListMeetings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxMaXN0TWVldGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/RequestMeeting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxSZXF1ZXN0TWVldGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/SearchInterns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxTZWFyY2hJbnRlcm5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/Webinars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxXZWJpbmFycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/BusinessOwnerPortal/WebinarsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NPd25lclBvcnRhbFxXZWJpbmFyc0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/InternPortal/CompanySearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuUG9ydGFsXENvbXBhbnlTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/InternPortal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuUG9ydGFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/InternPortal/MeetingRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuUG9ydGFsXE1lZXRpbmdSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/InternPortal/WebinarList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJuUG9ydGFsXFdlYmluYXJMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Register/BusinessOwner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcQnVzaW5lc3NPd25lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Register/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Register/Intern.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW50ZXJuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Shared/_LayoutBO.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRCTy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Shared/_LayoutIN.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRJTi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/broshie007/Desktop/ConnectWise_Web/ConnectWise_Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-u8y8ehpbj6

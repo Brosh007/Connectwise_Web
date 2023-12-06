@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: mediumpurple;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .list-group-item {
+            background-color: #3CBCBC;
+            border-color: #3CBCBC;
+            color: #fff;
+        }
+
+        .tab-content {
+            padding-top: 20px;
+        }
+
+        .navbar {
+            height: 100px;
+            background-color: #222;
+            border-bottom: 1px solid #3CBCBC;
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            border: none;
+            background-color: transparent;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .nav-link {
+            justify-content: center;
+            color: #3CBCBC;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px 5px 0 0;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            background-color:  rebeccapurple;
+            text-decoration: none;
+            border:none;
+            color:white; 
+        }
+
+        .nav-link.active {
+            background-color: #3CBCBC;
+            text-decoration: none;
+        }
+
+        .navbar-brand img {
+            max-height: 90px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="BusinessOwnerPortal" asp-action="Index">
+                    <img src="~/images/connectwise_logo.png" alt="ConnectWise_Web Logo">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link " id="home-tab" asp-controller="BusinessOwnerPortal" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="webinars-tab" asp-controller="BusinessOwnerPortal" asp-action="Webinars">Webinars</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="internSearch-tab" asp-controller="BusinessOwnerPortal" asp-action="SearchInterns">Intern Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="messaging-tab" asp-controller="BusinessOwnerPortal" asp-action="ListInterns">Request Meeting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="messaging-tab" asp-controller="BusinessOwnerPortal" asp-action="ListMeetings">View Meetings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @RenderBody()
+
+    <footer class="border-top footer text-light" style="background-color: #333;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>&copy; 2023 - ConnectWise_Web</p>
+                    <p>Your platform for connecting business owners and interns.</p>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-unstyled float-end">
+                        <li class="mb-2"><strong>Contact:</strong> info@connectwise.com</li>
+                        <li class="mb-2"><strong>Address:</strong> 123 ConnectWay, City, Country</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

@@ -1,0 +1,120 @@
+﻿@model List<Intern>
+@{
+    Layout = "~/Views/Shared/_LayoutBO.cshtml"; 
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222; /* Darker background color for the body */
+        color: white;
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    h2 {
+        color: mediumpurple; /* Purple color for headings */
+        text-align:center;
+        padding:10px;
+    }
+
+    a.link {
+        color: #3CBCBC;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    table.table {
+        width: 70%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff; /* White background for the table */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #3CBCBC; /* Teal background for all table headers */
+        color: white; /* White text color for table headers */
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+        th:first-child {
+            background-color: #3CBCBC; /* Teal background for the first column header */
+        }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray background for even rows */
+    }
+
+    tr:hover {
+        background-color: #e0e0e0; /* Lighter gray background on hover */
+    }
+
+    .btn {
+        background-color: #3CBCBC;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .btn:hover {
+            background-color: mediumpurple;
+        }
+</style>
+
+<h2>List of Available Interns</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="background-color: #3CBCBC;">First Name</th>
+            <th style="background-color: #3CBCBC;">Last Name</th>
+            <th style="background-color: #3CBCBC;">Email</th>
+            <th style="background-color: #3CBCBC;">Phone Number</th>
+            <th style="background-color: #3CBCBC;">Profile Image</th>
+            <th style="background-color: #3CBCBC;">Skills</th>
+            <th style="background-color: #3CBCBC;">Interests</th>
+            <th style="background-color: #3CBCBC;">Education</th>
+            <th style="background-color: #3CBCBC;">Location</th>
+            <th style="background-color: #3CBCBC;">Bio</th>
+            <th style="background-color: #3CBCBC;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var intern in Model)
+        {
+            <tr>
+                <td>@intern.FirstName</td>
+                <td>@intern.LastName</td>
+                <td>@intern.Email</td>
+                <td>@intern.PhoneNumber</td>
+                <td>@intern.ProfileImage</td>
+                <td>@intern.Skills</td>
+                <td>@intern.Interests</td>
+                <td>@intern.Education</td>
+                <td>@intern.Location</td>
+                <td>@intern.Bio</td>
+                <td>
+                    <!-- Add a button or link to request a meeting with this intern -->
+                    <a href="@Url.Action("RequestMeeting", "BusinessOwnerPortal", new { internId = intern.InternID })" class="btn btn-primary">Request Meeting</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

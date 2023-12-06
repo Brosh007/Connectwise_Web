@@ -1,0 +1,169 @@
+﻿@model ConnectWise_Web.Models.Webinar
+
+@{
+    ViewBag.Title = "Edit Webinar";
+    Layout = "~/Views/Shared/_LayoutBO.cshtml";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222; /* Dark gray background color */
+    }
+
+    h1, h4 {
+        color: #3CBCBC; /* Teal color for headings */
+        text-align: center;
+    }
+
+    hr {
+        border-top: 2px solid #3CBCBC;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-md-6 {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #333;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Ensure there is space between form and back link */
+    }
+
+    .form-group label {
+        color: #3CBCBC;
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #444; /* Slightly lighter border color */
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #444;
+        color: #fff;
+    }
+
+    .btn-primary {
+        background-color: #3CBCBC; /* Teal button color */
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 20px auto 0; /* Center button and provide space from the last input */
+    }
+
+        .btn-primary:hover {
+            background-color: #36a6a6; /* Darker teal on hover */
+        }
+
+    .back-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+        .back-link a {
+            color: #3CBCBC;
+            text-decoration: none;
+        }
+
+            .back-link a:hover {
+                color: #36a6a6;
+            }
+
+    .text-danger {
+        color: #ff6666; /* Change the color of validation message */
+    }
+</style>
+
+<h1>Edit Webinar</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Edit", "BusinessOwnerPortal", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr />
+                @Html.HiddenFor(model => model.FirebaseKey)
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateAndTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DateAndTime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DateAndTime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SpeakerName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SpeakerName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SpeakerName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SpeakerBio, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.SpeakerBio, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SpeakerBio, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="back-link">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "link" })
+</div>
